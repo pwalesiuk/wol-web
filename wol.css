@@ -1,0 +1,45 @@
+body {
+  background-color: #f9f9f9;
+  font-family: times-new-roman;
+  font-size: 12pt;
+}
+
+a:link, a:visited {
+  color: blue;
+}
+
+table.header {
+	font-family: times-new-roman;
+	background-color: #9DBDFF;
+/*	margin:10px 0pt 15px;*/
+	font-size: 12pt;
+	width: 100%;
+	text-align: left;
+	border: 1px solid #222;
+}
+
+table.hosts {
+	font-family: courier;
+	background-color: #CDCDCD;
+/*	margin:10px 0pt 15px;*/
+	font-size: 12pt;
+/*	width: 100%;*/
+	text-align: left;
+	border: 1px solid #222;
+}
+
+thead tr th, tfoot tr th {
+	background-color: #bbbbbb;
+	border: 0px solid #FFF;
+	font-size: 10pt;
+	padding: 4px;
+}
+
+table.hosts tbody tr.odd {
+	background-color:#dddddd;
+}
+
+table.hosts tbody td {
+   padding: 1px 3px 1px 3px;
+}
+

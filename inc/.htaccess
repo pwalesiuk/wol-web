@@ -1,0 +1,4 @@
+# This folder does not require access over HTTP
+# (the following directive denies access by default)
+Require all denied
+
