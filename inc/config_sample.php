@@ -1,15 +1,14 @@
 <?php
-  define('NS_BASE_DIR', '/var/www/wizard/htdocs/netstats');
-  define('NS_BASE_URL', 'http://10.6.7.101/netstats');
+  define('WOL_BASE_DIR', '/var/www/wizard/htdocs/wold');
 
   $config = array(
-    'dbl_dsn'			=> 'pgsql:dbname=net',
-    'dbl_user'			=> 'net',
-    'dbl_pass'			=> 'n3tb0s',
-
+    'wolbin'                    => '/usr/bin/wakeonlan',
+    'broadcast'                 => '192.168.1.255',
     'dev'			=> 1,
     'local_cache_time'		=> 10,
     'log_level'			=> LOG_INFO
   );
+
+  $hosts = array('MS' => '00:d8:61:c2:9b:a7',);
 
 ?>

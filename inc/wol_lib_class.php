@@ -17,6 +17,7 @@ class wol_lib {
   function __construct() {
     require_once('config.php');
     $this->config = $config;
+    /*
     try {
       $this->dbl = new PDO($this->config['dbl_dsn'],
                            $this->config['dbl_user'],
@@ -25,12 +26,13 @@ class wol_lib {
       print "Błąd przy łączeniu z pgsql: " . $e->getMessage() . "<br/>";
       die();
     }
-
-    $this->hosts = $hosts;
-    $this->nmap_out = array();
     $this->dbl->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $this->db_stmt = array();
     $this->baza = 'l';
+    */
+
+    $this->hosts = $hosts;
+    $this->nmap_out = array();
     $this->logs = array();
     $this->log_file = WOL_BASE_DIR . '/log/wol.log';
 
