@@ -5,6 +5,3 @@
 <title>{$title|default:"wake on lan super szpan"}</title>
 </head>
 <body>
-<table align="center" border=0>
-<tr>
-<td>

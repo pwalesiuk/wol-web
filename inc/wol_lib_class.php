@@ -166,8 +166,26 @@ class wol_lib {
     return $wyn;
   }
 
+  function get_harp() {
+    $wyn = array();
+    $linie = file('/proc/net/arp');
+    $spr = array_values($this->hosts);
+    //echo '<pre>';
+    foreach ($linie as $linia) {
+      $pom = preg_split('/ +/', $linia);
+      if (strlen($pom[0]) < 6) continue;
+      if (in_array($pom[3], $spr)) continue;
+      $h = array('mac' => $pom[3], 'ip' => $pom[0]);
+      $h['sort'] = explode('.', $pom[0])[3];
+      $wyn[] = $h;
+    }
+    //echo '</pre>';
+    $pom = array_column($wyn, 'sort');
+    array_multisort($pom, SORT_ASC, SORT_NUMERIC, $wyn);
+    return $wyn;
+  }
   function get_logs() {
-    exec('/usr/bin/tail -n 10 ' . $this->log_file, $logs);
+    exec('/usr/bin/tail -n 20 ' . $this->log_file, $logs);
     $logs = array_reverse($logs);
     $wyn = array();
     foreach ($logs as $log) {
