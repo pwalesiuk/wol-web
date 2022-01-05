@@ -7,6 +7,7 @@ $hosts = $wol_lib->get_hosts();
 $harp = $wol_lib->get_harp();
 
 
+$smarty->assign('sesja', wol_lib::version . ' (' . PHP_VERSION . ')');
 $smarty->assign('hosts', $hosts);
 $smarty->assign('harp', $harp);
 $smarty->assign('logs', $wol_lib->get_logs());

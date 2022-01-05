@@ -5,6 +5,8 @@
  */
 class wol_lib {
 
+  const version = '2022-01-05';
+
   public $dbl;  // link do bazy lokalnej
   public $config; // konfiguracja
   public $logs;   // logi
@@ -177,6 +179,7 @@ class wol_lib {
       if (in_array($pom[3], $spr)) continue;
       $h = array('mac' => $pom[3], 'ip' => $pom[0]);
       $h['sort'] = explode('.', $pom[0])[3];
+      $h['up'] = 0;
       $wyn[] = $h;
     }
     //echo '</pre>';
