@@ -5,12 +5,15 @@
  */
 class wol_lib {
 
-  const version = '2022-01-05';
+  const version = '2023-09-20';
 
   public $dbl;  // link do bazy lokalnej
   public $config; // konfiguracja
   public $logs;   // logi
 
+  private $hosts;
+  private $nmap_out;
+  private $log_file;
   private $db_stmt;  // wykorzystywane obiekty PDOStatement
 
   /**
